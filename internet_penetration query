@@ -1,0 +1,7 @@
+-- MYsql Query to calculate the average internet usage rate by continent
+-- The country table in the 'world database' in MYSQL were joined
+SELECT continent, AVG(internetuserate)
+FROM internetdata_usage.gapminder_internet
+JOIN world.country
+ON gapminder_internet.country = country.name
+GROUP BY continent
